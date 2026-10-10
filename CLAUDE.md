@@ -51,11 +51,11 @@ A battle is determined by its plan and seed: the `#plan=…&seed=…` link must 
 
 ## Shared origin
 
-To be served at `/rtw/` (not deployed yet). The manifest `id` is `/rtw/` (never change it once released). localStorage keys are `rtw.plan` and `rtw.sound`. `sw.js` uses cache prefix `rtw-`, handles only requests inside its scope, reads only its own cache (never `caches.match()`), precaches with `cache: 'reload'` and fetches with `cache: 'no-cache'`. See `../CLAUDE.md`.
+Served at `/rtw/`. The manifest `id` is `/rtw/` (never change it once released). localStorage keys are `rtw.plan` and `rtw.sound`. `sw.js` uses cache prefix `rtw-`, handles only requests inside its scope, reads only its own cache (never `caches.match()`), precaches with `cache: 'reload'` and fetches with `cache: 'no-cache'`. See `../CLAUDE.md`.
 
 ## Deployment
 
-Not deployed yet. To ship, follow "Adding a new app" in `../CLAUDE.md`, then after `npm test` and `npm run bump` copy only the served files:
+Live since 2026-10-10 (nginx block in the site config, card on the homepage). To ship an update, after `npm test` and `npm run bump` copy only the served files:
 
 ```bash
 rsync -a --delete --chmod=D755,F644 index.html manifest.webmanifest sw.js css js icons root@185.163.204.17:/var/www/shoryuken.me/rtw/

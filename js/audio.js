@@ -176,7 +176,8 @@ export class SoundEngine {
     o.frequency.exponentialRampToValueAtTime(Math.max(f1, 1), t + dur);
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, t);
-    g.gain.exponentialRampToValueAtTime(peak, t + attack);
+    // Exponential ramps throw on a target of 0, which a silent (far-off) sound can ask for.
+    g.gain.exponentialRampToValueAtTime(Math.max(peak, 0.0001), t + attack);
     g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
     o.connect(g).connect(dest);
     o.start(t);
@@ -196,7 +197,8 @@ export class SoundEngine {
     f.frequency.exponentialRampToValueAtTime(Math.max(f1, 1), t + dur);
     const g = ctx.createGain();
     g.gain.setValueAtTime(0.0001, t);
-    g.gain.exponentialRampToValueAtTime(peak, t + attack);
+    // Exponential ramps throw on a target of 0, which a silent (far-off) sound can ask for.
+    g.gain.exponentialRampToValueAtTime(Math.max(peak, 0.0001), t + attack);
     g.gain.exponentialRampToValueAtTime(0.0001, t + dur);
     src.connect(f).connect(g).connect(dest);
     src.start(t, Math.random() * 1.8);
