@@ -1,5 +1,14 @@
 # RTW
 
+[![CI](https://github.com/ali-raheem/rtw-battle-planner/actions/workflows/ci.yml/badge.svg)](https://github.com/ali-raheem/rtw-battle-planner/actions/workflows/ci.yml) [![GitHub Pages](https://github.com/ali-raheem/rtw-battle-planner/actions/workflows/pages.yml/badge.svg)](https://github.com/ali-raheem/rtw-battle-planner/actions/workflows/pages.yml)
+
+**▶ Try it live: [shoryuken.me/rtw](https://shoryuken.me/rtw/)** · mirror on [GitHub Pages](https://ali-raheem.github.io/rtw-battle-planner/) · installable, works offline
+
+<p align="center">
+  <a href="https://shoryuken.me/rtw/"><img src="docs/screenshots/desktop.webp" alt="RTW on a desktop browser" width="74%"></a>
+  <a href="https://shoryuken.me/rtw/"><img src="docs/screenshots/mobile.webp" alt="RTW on a phone" width="22%"></a>
+</p>
+
 Draw up two medieval armies company by company, then watch them fight it out. You
 pick spearmen, swordsmen, archers and cavalry from a palette, place each company on
 your ground, set its frontage and facing, and press Fight. The battle itself is
