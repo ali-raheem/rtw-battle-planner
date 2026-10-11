@@ -116,3 +116,7 @@ which flee for their own edge of the field.
 npm test
 npm run bump            # patch; or: npm run bump -- minor | major
 ```
+
+## Licence
+
+[MIT](LICENSE) © 2026 Ali Raheem.
